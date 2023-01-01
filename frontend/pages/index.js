@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Link from "next/link";
 import {useQuery} from 'urql';
+import Product from '../components/Products';
 import { PRODUCT_QUERY } from '../lib/query';
+
 
 
 export default function Home() {
@@ -21,8 +23,8 @@ console.log(products);
       </Head>
       <main >
     <h1>Helllo world</h1>
-    {products.map((product)=>(
-     <Product product={product}/>
+    { products.map ((product) => (
+      <Product product = {product} key={product.attributes.slug} />
     ))}
       </main>
     </div>

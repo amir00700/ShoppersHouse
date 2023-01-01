@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import {Provider, createClient} from "urql";
 
-const client =createClient({url:"http://localhost:1337/graphql"})
+const client =createClient({url: process.env.NEXT_PUBLIC_BACKEND_API})
 
 export default function App({ Component, pageProps }) {
   return  ( 
@@ -9,6 +9,6 @@ export default function App({ Component, pageProps }) {
     <Component {...pageProps} />
     </Provider>
 
-  );
+  ); 
 } 
    
