@@ -1,10 +1,10 @@
+import { ProductStyles } from "../styles/ProductStyle";
 export default function Product({product}){
     const {title,price,image}=product.attributes;
 
     return(
 
-        
-        <div>
+        <ProductStyles>
            <div>
           <img src= {image.data.attributes.formats.small.url} alt=""/>  
         </div> 
@@ -13,6 +13,6 @@ export default function Product({product}){
     <h3>{price}</h3>
 
         </div>
-        </div>
+        </ProductStyles>
     )
 }
