@@ -6,7 +6,7 @@ query{
      title
       description
           price
-      slug
+        slug
           image{
             data{
               attributes{
@@ -19,4 +19,29 @@ query{
       }
     }
   }
+`
+
+export const GET_PRODUCT_QUERY= `
+query getProduct($slug:String!){
+    products( filters: {slug: {eq: $slug}}){
+
+
+        data{
+            attributes{
+                title,
+                slug,
+                description,
+                price,
+                image{
+                    data{
+                        attributes{
+                            formats
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 `
