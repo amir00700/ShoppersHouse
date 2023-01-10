@@ -7,6 +7,7 @@ import { Gallery } from '../styles/Gallery';
 
 
 
+
 export default function Home() {
   //Fetch produtcs from strapi
 const[results]=useQuery({query: PRODUCT_QUERY})
@@ -23,6 +24,7 @@ console.log(products);
         <title>Create Next App</title>
       </Head>
       <main >
+      
         <Gallery>
     { products.map ((product) => (
       <Product product = {product} key={product.attributes.slug} />

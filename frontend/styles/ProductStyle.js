@@ -5,6 +5,7 @@ background-color:white;
 
 h3{
     color:green;
+    
 }
 img{
     width:100%;
